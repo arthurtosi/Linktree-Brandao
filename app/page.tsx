@@ -1,7 +1,7 @@
 import type React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Instagram, Phone, Mail, Github, Linkedin } from "lucide-react"
+import { Instagram, Phone, Mail, Linkedin } from "lucide-react"
 
 export default function LinkTree() {
   return (
