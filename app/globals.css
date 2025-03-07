@@ -2,17 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #__next {
-  height: 100%;
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
+
+
+/* globals.css */
+html {
+  min-height: 100vh;
 }
 
 body {
-  background: linear-gradient(to bottom right, #1d1d1d, #2d2d2d, #ff6a00);
+  background: linear-gradient(
+    to bottom right,
+    #1d1d1d,
+    #2d2d2d,
+    #ff6a00
+  );
   background-attachment: fixed;
-  background-size: cover;
-  width: 100%;
-  overflow-x: hidden;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#__next {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

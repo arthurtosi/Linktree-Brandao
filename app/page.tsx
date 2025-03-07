@@ -1,13 +1,16 @@
 import type React from "react"
 import Image from "next/image"
-import Link from "next/link"
+
 import { Instagram, Phone, Mail, Linkedin, Plane } from "lucide-react"
 import { FaWhatsapp } from "react-icons/fa";
+
 import LinkButton from "./components/LinkButton"
+import SocialIcon from "./components/SocialIcon"
+
 
 export default function LinkTree() {
   return (
-    <div className="w-full h-full min-h-screen bg-gradient-to-br from-[#1d1d1d] via-[#2d2d2d] to-[#ff6a00] flex flex-col items-center justify-center p-4">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-md bg-black bg-opacity-30 p-8 rounded-2xl backdrop-blur-sm">
         {/* Profile Section */}
         <div className="flex flex-col items-center mb-8">
@@ -42,13 +45,4 @@ export default function LinkTree() {
     </div>
   )
 }
-
-function SocialIcon({ href, icon }: { href: string; icon: React.ReactNode }) {
-  return (
-    <Link href={href} className="bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-30 transition-colors">
-      <div className="text-white">{icon}</div>
-    </Link>
-  )
-}
-
 
