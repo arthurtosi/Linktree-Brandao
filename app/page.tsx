@@ -15,8 +15,8 @@ export default function LinkTree() {
         <div className="flex flex-col items-center mb-8">
           <div className="w-32 h-32 mb-4 relative">
             <Image
-              src="/avatar.jpeg"
-              alt="Profile Picture"
+              src="/avatar-pedro.jpg"
+              alt="Pedro Brandão"
               fill
               sizes="128px"
               className="rounded-full object-cover"
