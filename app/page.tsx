@@ -22,8 +22,8 @@ export default function LinkTree() {
               className="rounded-full object-cover"
             />
           </div>
-          <h1 className="text-2xl font-bold text-[var(--sf-text)]">Pedro Lucas Brandão</h1>
-          <p className="text-[var(--sf-text-muted)] mt-2 text-center">Head de Finanças e Pessoas · Smartside · Triple AI</p>
+          <h1 className="text-2xl font-bold text-[var(--sf-text)]">Pedro Brandão</h1>
+          <p className="text-[var(--sf-text-muted)] mt-2 text-center">Head de Finanças e Pessoas · smartside.ai</p>
         </div>
 
         {/* Social Icons */}
@@ -60,7 +60,7 @@ export default function LinkTree() {
           />
           <LinkButton
             href="https://www.smartside.ai/"
-            text="Site da Smartside"
+            text="Site da smartside.ai"
             icon={Globe}
             variant="secondary"
           />

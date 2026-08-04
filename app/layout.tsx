@@ -14,9 +14,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Pedro Lucas Brandão",
+  title: "Pedro Brandão",
   description:
-    "Head de Finanças e Pessoas na Smartside · Triple AI. Contato, redes e formulário para conversarmos.",
+    "Head de Finanças e Pessoas na smartside.ai. Contato, redes e formulário para conversarmos.",
 };
 
 export default function RootLayout({
