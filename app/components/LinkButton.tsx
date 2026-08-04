@@ -5,19 +5,25 @@ interface LinkButtonProps {
   href: string;
   text: string;
   icon: IconType; // O ícone será um componente React
+  variant?: "primary" | "secondary";
 }
 
-function LinkButton({ href, text, icon: Icon }: LinkButtonProps) {
+const base =
+  "flex items-center justify-center gap-2 w-full h-[52px] px-7 rounded-[var(--ds-r-pill)] border text-[15px] font-medium tracking-[0.01em] whitespace-nowrap transition-all duration-200 [transition-timing-function:cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-0.5";
+
+const variants = {
+  primary:
+    "border-transparent bg-[var(--sf-inverse-bg)] text-[var(--sf-inverse-text)] hover:bg-[var(--sf-inverse-bg-hover)]",
+  secondary:
+    "border-[var(--sf-line-strong)] bg-transparent text-[var(--sf-text)] hover:bg-[var(--sf-inverse-bg)] hover:text-[var(--sf-inverse-text)] hover:border-[var(--sf-inverse-bg)]",
+} as const;
+
+function LinkButton({ href, text, icon: Icon, variant = "secondary" }: LinkButtonProps) {
   return (
-    <div>
-      <Link
-        href={href}
-        className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-white bg-opacity-10 text-center text-white font-semibold rounded-lg shadow hover:bg-opacity-20 transition-colors border border-white border-opacity-20"
-      >
-        <Icon size={20} />
-        {text}
-      </Link>
-    </div>
+    <Link href={href} className={`${base} ${variants[variant]}`}>
+      <Icon size={16} />
+      {text}
+    </Link>
   );
 }
 
