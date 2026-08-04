@@ -2,23 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+/* globals.css
+   Tokens portados de Projetos/design-system-smartside/css/tokens.css
+   (superfície escura). Só o subconjunto usado nesta página — o app não
+   importa o DS inteiro pra não colidir com o preflight do Tailwind v3
+   (ver decisoes.md do design system: camada de cascata é uma armadilha
+   pra consumidor em v3 sem tratamento). */
+:root {
+  --ds-ink-0: #0a0a0b;    /* piso da superfície escura */
+  --ds-ink-2: #161618;    /* cartão sobre superfície escura */
+  --ds-paper-0: #ffffff;
 
+  --sf-text: #ffffff;
+  --sf-text-soft: rgba(255, 255, 255, 0.78);
+  --sf-text-muted: rgba(255, 255, 255, 0.70);
+  --sf-text-faint: rgba(255, 255, 255, 0.50);
 
-/* globals.css */
+  --sf-line: rgba(255, 255, 255, 0.10);
+  --sf-line-strong: rgba(255, 255, 255, 0.14);
+
+  --sf-fill-1: rgba(255, 255, 255, 0.05);
+  --sf-fill-2: rgba(255, 255, 255, 0.08);
+  --sf-fill-3: rgba(255, 255, 255, 0.14);
+
+  --sf-inverse-bg: #ffffff;
+  --sf-inverse-bg-hover: #f1f1f1;
+  --sf-inverse-text: #121212;
+
+  --ds-r-pill: 999px;
+  --ds-r-2xl: 24px;
+
+  --ds-dur-2: 200ms;
+  --ds-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 html {
   min-height: 100vh;
 }
 
 body {
-  background: linear-gradient(
-    to bottom right,
-    #1d1d1d,
-    #2d2d2d,
-    #ff6a00
-  );
+  /* Monocromática por decisão de marca: piso escuro sólido, sem gradiente
+     colorido — a marca não usa cor decorativa. */
+  background: var(--ds-ink-0);
   background-attachment: fixed;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 #__next {
